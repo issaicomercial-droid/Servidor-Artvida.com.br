@@ -1,15 +1,14 @@
 # Logs
+logs/
 *.log
-tunnel_final.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# n8n Data (SQLite)
-n8n/.n8n/
-n8n/binaryData/
-
-# Credentials / Tokens
+# Docker
+n8n/
 .env
-auth.json
 
-# OS files
+# System
 .DS_Store
 Thumbs.db

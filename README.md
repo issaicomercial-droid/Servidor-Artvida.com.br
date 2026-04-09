@@ -16,7 +16,7 @@ Este diretório contém a infraestrutura e configurações do servidor. Para inf
 
 ### 📡 Túnel Cloudflare (Conectividade)
 - **Status do Túnel**: `cloudflared tunnel info`
-- **Logs em tempo real**: `tail -f tunnel_final.log`
+- **Logs em tempo real**: `tail -f logs/tunnel_final.log`
 
 ### 🤖 Automação (n8n)
 O cérebro de automação roda via Docker Compose.
@@ -37,8 +37,10 @@ Para que eu (Antigravity) apareça para você em outro PC exatamente como estou 
 ## 📂 Estrutura de Pastas Operacional
 
 - `server.py`: Servidor que hospeda o App na porta 8000.
-- `Central Artvida APP/`: [Clique aqui para ver a documentação do App](./Central Artvida APP/README.md).
+- `Central Artvida APP/`: [Documentação do App](./Central Artvida APP/README.md).
 - `ACESSAR_SERVIDOR.ps1`: Script de setup para novos computadores.
+- `docs/`: Guia de painel, histórico de erros e tutoriais.
+- `logs/`: Histórico de execução do sistema e túneis.
 - `chat/`: [Base de Conhecimento e Registro IA](./chat/conhecimento_ia.md).
 
 ---
