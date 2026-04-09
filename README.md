@@ -1,44 +1,48 @@
 # 🚀 Central do Servidor WSL2 - artvida.com.br
 
-Este diretório é o "Cérebro" do seu servidor, contendo as configurações de rede, automação e a aplicação principal.
+Este diretório contém a infraestrutura e configurações do servidor. Para informações sobre o Chatbot, veja a pasta `Central Artvida APP/`.
 
 ## 🌐 Endereços Ativos
 
 | Serviço | URL Pública | Porta Interna | Descrição |
 | :--- | :--- | :--- | :--- |
-| **Site Principal** | [https://artvida.com.br](https://artvida.com.br) | `8000` | Interface de Chat (Central Artvida APP) |
+| **Site Principal** | [https://artvida.com.br](https://artvida.com.br) | `8000` | Central Artvida APP |
 | **Acesso SSH** | `ssh.artvida.com.br` | `22` | Acesso terminal estilo VPS |
 | **n8n Automation** | [https://n8n.artvida.com.br](https://n8n.artvida.com.br) | `5678` | Painel de automação de fluxos |
 
 ---
 
-## 🤖 Central Artvida APP (O Chat Bot)
-
-Esta é a interface web que permite "plugar" o seu bot do Telegram no seu site. 
-- **Localização**: `./Central Artvida APP/`
-- **Como funciona**: O site envia as mensagens para o **n8n**, que processa a lógica de cadastro de produtos da mesma forma que faz com o Telegram.
-
----
-
-## 🛠️ Comandos de Controle
+## 🛠️ Comandos de Controle do Servidor
 
 ### 📡 Túnel Cloudflare (Conectividade)
-Configuração gerenciada via painel Zero Trust.
 - **Status do Túnel**: `cloudflared tunnel info`
-- **Logs do Túnel**: `tail -f tunnel_final.log`
+- **Logs em tempo real**: `tail -f tunnel_final.log`
 
 ### 🤖 Automação (n8n)
-O n8n roda via Docker na pasta raiz.
-- **Localização**: `./n8n/`
+O cérebro de automação roda via Docker Compose.
 - **Iniciar**: `docker compose up -d`
+- **Pastas**: `./n8n/`
 
 ---
 
-## 📂 Estrutura de Pastas Organizada
+## 🤖 Como me conectar de outro Computador (Acesso Remoto à IA)
 
-- `server.py`: O servidor que "liga" o seu site na porta 8000.
-- `Central Artvida APP/`: Contém o código visual do seu site (HTML/CSS/JS).
-- `n8n/`: Configurações do Docker para o n8n.
-- `ACESSAR_SERVIDOR.ps1`: Script para configurar novos computadores.
-- `PASSO_A_PASSO_PAINEL.md`: Guia de configuração do Zero Trust.
-- `tentativas_e_erros.md`: Histórico de diagnósticos da rede.
+Para que eu (Antigravity) apareça para você em outro PC exatamente como estou aqui:
+1. No VS Code do novo PC, abra uma conexão **Remote - SSH** para `ssh.artvida.com.br`.
+2. Abra a pasta: `/home/issai/projetos/Servidor artvida.com.br`.
+3. A minha janela de chat lateral aparecerá com todo o nosso histórico.
+
+---
+
+## 📂 Estrutura de Pastas Operacional
+
+- `server.py`: Servidor que hospeda o App na porta 8000.
+- `Central Artvida APP/`: [Clique aqui para ver a documentação do App](./Central Artvida APP/README.md).
+- `ACESSAR_SERVIDOR.ps1`: Script de setup para novos computadores.
+- `chat/`: [Base de Conhecimento e Registro IA](./chat/conhecimento_ia.md).
+
+---
+
+## 🐙 Controle de Versão
+- **Repositório**: `https://github.com/issaicomercial-droid/Servidor-Artvida.com.br.git`
+- **Branch**: `main`
