@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtVida | Central de Controle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="login-container" class="overlay">
+        <div class="login-box">
+            <div class="login-logo">ArtVida</div>
+            <h2>Acesso Restrito</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" placeholder="Digite seu usuário" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+                <p id="login-error" class="hidden">Usuário ou senha incorretos.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Interface de Chat (Escondida até o login) -->
+    <div id="app-container" class="app-container hidden">
+        <header>
+            <div class="logo">ArtVida Central</div>
+            <div class="status">
+                <span class="indicator"></span> Online (Issai)
+            </div>
+        </header>
+
+        <main id="chat-window">
+            <div class="message system">
+                <div class="content">
+                    Olá Issai! Bem-vindo de volta à sua Central. O que vamos cadastrar hoje?
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Digite uma mensagem..." autocomplete="off">
+                <button type="submit">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
