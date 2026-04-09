@@ -12,6 +12,22 @@ Este diretório contém as configurações e ferramentas para o seu servidor cas
 
 ---
 
+## 🤖 Como me conectar de outro Computador (Acesso Rápido)
+
+Para configurar e acessar este servidor em qualquer computador Windows novo, basta rodar o nosso script de automação:
+
+1. Baixe o arquivo `ACESSAR_SERVIDOR.ps1`.
+2. Abra o **PowerShell** na pasta do arquivo.
+3. Execute o comando:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File ACESSAR_SERVIDOR.ps1
+   ```
+*O script verificará o cloudflared, instalará se necessário, configurará o seu acesso SSH e conectará você ao servidor automaticamente.*
+
+---
+
+## 🤖 Como me conectar de outro Computador (Acesso Remoto à IA)
+
 ## 🛠️ Comandos de Controle
 
 ### 📡 Túnel Cloudflare (Conectividade)
@@ -35,6 +51,16 @@ O n8n roda via Docker Compose para facilitar a manutenção.
 - `n8n/`: Diretório com as configurações do Docker para o n8n.
 - `tentativas_e_erros.md`: Histórico de diagnósticos da rede.
 - `PASSO_A_PASSO_PAINEL.md`: Guia de configuração do Zero Trust.
+- `.gitignore`: Arquivo para evitar que logs e senhas subam para o Git.
+
+---
+
+## 🐙 Controle de Versão (Git)
+
+O projeto já está inicializado com **Git**.
+- **Para ver o que mudou**: `git status`
+- **Para salvar uma alteração**: `git add .` e `git commit -m "sua mensagem"`
+- **Para subir para o GitHub**: Peça para eu te ajudar a configurar o `git remote add origin <link-do-seu-repo>`.
 
 ---
 
