@@ -1,0 +1,15 @@
+# Logs
+*.log
+tunnel_final.log
+
+# n8n Data (SQLite)
+n8n/.n8n/
+n8n/binaryData/
+
+# Credentials / Tokens
+.env
+auth.json
+
+# OS files
+.DS_Store
+Thumbs.db
