@@ -18,10 +18,16 @@ Este diretório contém a infraestrutura e configurações do servidor. Para inf
 - **Status do Túnel**: `cloudflared tunnel info`
 - **Logs em tempo real**: `tail -f logs/tunnel_final.log`
 
-### 🤖 Automação (n8n)
-O cérebro de automação roda via Docker Compose.
-- **Iniciar**: `docker compose up -d`
-- **Pastas**: `./n8n/`
+### 🤖 Automação (n8n - Docker Nativo)
+Agora o n8n roda **nativamente no Linux**, sem depender do Docker Desktop.
+- **Iniciar**: `docker compose up -d` (dentro da pasta `./n8n/`)
+- **Status**: `docker ps`
+
+### 🛡️ Blindagem e Resiliência (Boot Automático)
+O servidor está configurado para ligar **sem login do usuário** via Agendador de Tarefas do Windows.
+- **Script de Boot**: `start_app.sh` (Sincroniza relógio, inicia Docker, n8n e Site).
+- **Tarefa Windows**: `ArtVida_Server_Boot` (Modo S4U - Oculto).
+- **Log de Inicialização**: `logs/server.log`
 
 ---
 
